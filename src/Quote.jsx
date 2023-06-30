@@ -1,6 +1,7 @@
 import React from 'react';
 import {quotes} from './data.js';
 import TweetIt from './TweetIt';
+import './Quote.css'
 
 function Quote() {
       const [q, setQ] = React.useState(() => {
@@ -25,12 +26,12 @@ function Quote() {
 
     return(
       <div id="quote-box" style={color}>
-          <section id="quote-auth">
+          <section className="quote-auth">
             <h1 id="text">{q.quote}</h1>
             <h3 id="author">- {q.author}</h3>
           </section>
-          <section id="bottom-row">
-            <TweetIt id="tweet-quote" quote={q}/>
+          <section className="bottom-row">
+            <TweetIt quote={q}/>
             <button id="new-quote" onClick={getQuote}>Get New Quote</button>
           </section>
       </div>

@@ -1,4 +1,5 @@
 import twitter_icon from './assets/images/twitter_icon.png';
+import './TweetIt.css'
 
 
 function TweetIt (props) {
@@ -10,9 +11,9 @@ function TweetIt (props) {
     let tweetLink = "https://twitter.com/intent/tweet?text=" + tweetedQuote;
 
     return (
-        <div>
-            <a href = {tweetLink}><img src={twitter_icon} alt="tweet it" width="30px"/></a>
-        </div>
+        
+        <a href = {tweetLink} id="tweet-quote"><img src={twitter_icon} alt="tweet it" width="30px"/></a>
+        
     );
 }
 
